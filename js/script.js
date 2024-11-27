@@ -4,8 +4,9 @@ let deleteBtn = document.querySelectorAll(".deleteBtn")
 
 let inputUserPhotoLink = document.querySelector("#inputUserPhotoLink")
 let inputUserName = document.querySelector("#inputUserName")
-let descriptionText = document.querySelector("#descriptionText")
 let inputPostPhotoLink = document.querySelector("#inputPostPhotoLink")
+let descriptionText = document.querySelector("#descriptionText")
+let inputLikedUserName = document.querySelector("#inputLikedUserName")
 
 const postData = [
     {
@@ -26,20 +27,37 @@ const postData = [
 
 
 submitPost.addEventListener("click",()=>{
+    const date = new Date();
+    const year = date.getFullYear()
+    const month = date.getMonth()
+    const day = date.getDate()
+    const hour = date.getHours()
+    const minutes = date.getMinutes()
+    let dateTime = `${day}-${month}-${year}, ${hour}:${minutes}`
+
+    let reactCountNumber = parseInt(Math.random() * 1652);
+    let commentCountNumber = parseInt(Math.random() * 2658);
+    let shareCountNumber = parseInt(Math.random() * 223);
+
     postData.push(
         {
-            userImg: "./images/userPhoto.png",
-            userName: "Siam Talukder",
-            postTime: "5h",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            postImage: "https://images.pexels.com/photos/29207330/pexels-photo-29207330/free-photo-of-colorful-victorian-terraced-houses-street-view.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            likedUserName: "Ramen Biswas",
-            reactCount: "7k",
-            commentCount: "8k",
-            shareCount : "9k"
+            userImg: inputUserPhotoLink.value == ""?"./images/userPhoto.png":inputUserPhotoLink.value,
+            userName: `${inputUserName.value}`,
+            postTime: dateTime,
+            description:`${descriptionText.value}`,
+            postImage: inputPostPhotoLink.value == ""?"https://images.pexels.com/photos/29207330/pexels-photo-29207330/free-photo-of-colorful-victorian-terraced-houses-street-view.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load":inputPostPhotoLink.value,
+            reactCount: `${reactCountNumber}k`,
+            likedUserName: `${inputLikedUserName.value}`,
+            commentCount: `${commentCountNumber}k`,
+            shareCount : `${shareCountNumber}k`
         }
     )
     postList.innerHTML = "";
+    inputUserPhotoLink.value = "";
+    inputUserName.value = "";
+    inputPostPhotoLink.value = "";
+    descriptionText.value = "";
+    inputLikedUserName.value = "";
     display();
     console.log(postData);
     
@@ -71,7 +89,7 @@ const display = ()=>{
                                     <p class="react">
                                         <i class="fa-solid fa-heart"></i>
                                         <i class="fa-solid fa-thumbs-up"></i>
-                                        <span>${item.likedUserName}</span>
+                                        <span>${item.likedUserName} & </span>
                                         <span id="reactCount">${item.reactCount}</span>
                                     </p>
                                     <div class="commentShareWrapper">
@@ -103,7 +121,15 @@ postList.addEventListener("click",(event)=>{
 })
 
 
-
+// let dateTimeFun = ()=>{
+//     const date = new Date();
+//     const year = date.getFullYear()
+//     const month = date.getMonth()
+//     const day = date.getDate()
+//     const hour = date.getHours()
+//     const minutes = date.getMinutes()
+//     let dateTime = `${day}-${month}-${year}, ${hour}:${minutes}`
+// }
 
 
 
