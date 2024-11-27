@@ -1,3 +1,12 @@
+let submitPost = document.querySelector("#submitPost")
+let postList = document.querySelector(".postList")
+let deleteBtn = document.querySelectorAll(".deleteBtn")
+
+let inputUserPhotoLink = document.querySelector("#inputUserPhotoLink")
+let inputUserName = document.querySelector("#inputUserName")
+let descriptionText = document.querySelector("#descriptionText")
+let inputPostPhotoLink = document.querySelector("#inputPostPhotoLink")
+
 const postData = [
     {
         userImg: "./images/userPhoto.png",
@@ -12,20 +21,37 @@ const postData = [
     }
 ]
 
-let submitPost = document.querySelector("#submitPost")
-let postList = document.querySelector(".postList")
+
+
+
+
 submitPost.addEventListener("click",()=>{
+    postData.push(
+        {
+            userImg: "./images/userPhoto.png",
+            userName: "Siam Talukder",
+            postTime: "5h",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            postImage: "https://images.pexels.com/photos/29207330/pexels-photo-29207330/free-photo-of-colorful-victorian-terraced-houses-street-view.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            likedUserName: "Ramen Biswas",
+            reactCount: "7k",
+            commentCount: "8k",
+            shareCount : "9k"
+        }
+    )
     postList.innerHTML = "";
     display();
+    console.log(postData);
+    
 })
 
 
 
 const display = ()=>{
     postData.map((item)=>{
-        console.log(item);
         postList.innerHTML += `
             <li class="post">
+                        <button class="deleteBtn">Delete</button>
                         <div class="postHeading">
                             <div class="postHeadingImageWrapper">
                                 <img src="${item.userImg}" alt="userPic">
@@ -71,7 +97,10 @@ const display = ()=>{
     })
 }
 
-
+postList.addEventListener("click",(event)=>{
+    console.log(event.view);
+    
+})
 
 
 

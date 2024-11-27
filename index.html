@@ -62,10 +62,16 @@
     <main>
         <div class="mainWrapper">
             <div class="inputArea">
+                <input type="url" name="inputUserPhotoLink" id="inputUserPhotoLink" placeholder="Write User Photo Link">
+                <input type="text" name="inputUserName" id="inputUserName" placeholder="Write User Name">
+                <input type="url" name="inputPostPhotoLink" id="inputPostPhotoLink" placeholder="Write User Post Photo Link">
+                <input type="text" name="inputLikedUserName" id="inputLikedUserName" placeholder="Write User Name who Like your Post">
+                <textarea name="message" id="descripton" placeholder="Write your message"></textarea>
                 <button id="submitPost">Post</button>
             </div>
             <ul class="postList">
-                <!-- <li class="post">
+                <li class="post">
+                    <button class="deleteBtn">Delete</button>
                     <div class="postHeading">
                         <div class="postHeadingImageWrapper">
                             <img src="./images/userPhoto.png" alt="userPic">
@@ -108,51 +114,8 @@
                             </div>
                         </div>
                     </div>
-                </li> -->
-                <!-- <li class="post">
-                    <div class="postHeading">
-                        <div class="postHeadingImageWrapper">
-                            <img src="./images/userPhoto.png" alt="userPic">
-                        </div>
-                        <div>
-                            <h2 class="postUserName">Jon. Abrahon Linkon</h2>
-                            <p class="postTime">16h</p>
-                        </div>
-                    </div>
-                    <div class="postBody">
-                        <p class="postUserText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque omnis aliquam voluptas quidem sit, sequi doloremque nulla quisquam, beatae illo cum ullam a modi. Doloribus consequatur, ducimus tempore laboriosam odio fugiat culpa impedit aspernatur earum eveniet obcaecati odit exercitationem facilis saepe magnam iure ut. Rem debitis, quae quasi nulla consequuntur,
-                        </p>
-                        <div class="postBodyImageWrapper">
-                            <img src="https://images.pexels.com/photos/29207330/pexels-photo-29207330/free-photo-of-colorful-victorian-terraced-houses-street-view.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="post image">
-                        </div>
-                        <div class="postBodyBottom">
-                            <div class="likeCommentCounting">
-                                <p class="react">
-                                    <i class="fa-solid fa-heart"></i>
-                                     <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>ABM Shawon & Others</span>
-                                    <span id="reactCount">15k</span>
-                                </p>
-                                <div class="commentShareWrapper">
-                                    <p id="comment">
-                                        <span id="commentsCount">1k</span>
-                                        comments
-                                    </p>
-                                    <p id="share">
-                                        <span id="sharesCount">1.5k</span>
-                                        Shares
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="likeCommentShareIcon">
-                                <p id="like">like</p>
-                                <p id="comments">Comments</p>
-                                <p id="shares">Share</p>
-                            </div>
-                        </div>
-                    </div>
-                </li> -->
+                </li>
+               
             </ul>
         </div>
     </main>
