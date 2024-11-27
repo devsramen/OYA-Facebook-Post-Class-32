@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 80%;
+    background-color: #1c1c1c;
+    display: grid;
+    grid-template-areas: 
+                "header header header header"
+                "left-aside main main right-aside";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    color: white;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+span{
+    display: inline-block;
+}
+ol,ul{
+    list-style-type: none;
+}
+header {
+    grid-area: header;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+#header-Wrapper{
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+aside.left {
+    grid-area: left-aside;
+    /* background-color: #f4f4f4; */
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+aside.right {
+    grid-area: right-aside;
+    /* background-color: #f4f4f4; */
+    padding: 1rem;
+    position: relative;
+    border-left: 1px solid #ddd;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+    border-left: 1px solid #ddd;
+}
+.profileAndShortcut{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+}
+.contacts{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+/* NAV Section Start */
+#nav{
+    background-color: #262729;
+}
+/* NAV Section End */
+
+/* NAV Section Start */
+/* NAV Section End */
+
+
+
+
+.navLogo{
+    width: 45px;
+    height: 45px;
+}
