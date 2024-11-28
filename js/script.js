@@ -1,6 +1,6 @@
 let submitPost = document.querySelector("#submitPost")
 let postList = document.querySelector(".postList")
-let deleteBtn = document.querySelectorAll(".deleteBtn")
+
 
 let inputUserPhotoLink = document.querySelector("#inputUserPhotoLink")
 let inputUserName = document.querySelector("#inputUserName")
@@ -53,20 +53,20 @@ submitPost.addEventListener("click",()=>{
         }
     )
     postList.innerHTML = "";
-    inputUserPhotoLink.value = "";
-    inputUserName.value = "";
-    inputPostPhotoLink.value = "";
-    descriptionText.value = "";
-    inputLikedUserName.value = "";
+    // inputUserPhotoLink.value = "";
+    // inputUserName.value = "";
+    // inputPostPhotoLink.value = "";
+    // descriptionText.value = "";
+    // inputLikedUserName.value = "";
     display();
-    console.log(postData);
-    
+    // console.log(postData);
+    deleteItem()
 })
 
 
 
 const display = ()=>{
-    postData.map((item)=>{
+    postData.map((item,index)=>{
         postList.innerHTML += `
             <li class="post">
                         <button class="deleteBtn">Delete</button>
@@ -115,21 +115,21 @@ const display = ()=>{
     })
 }
 
-postList.addEventListener("click",(event)=>{
-    console.log(event.view);
+let deleteItem = ()=>{
+    let deleteBtn = document.querySelectorAll(".deleteBtn");
+    let deleteBtnArray = Array.from(deleteBtn)
     
-})
+    deleteBtnArray.map((deleteButton,index)=>{
+        deleteButton.addEventListener("click",()=>{
+            console.log("delete", index);
+            
+            postData.splice(index,1)
+            console.log(postData);            
+            console.log(deleteBtnArray);            
+        })
+    })
 
-
-// let dateTimeFun = ()=>{
-//     const date = new Date();
-//     const year = date.getFullYear()
-//     const month = date.getMonth()
-//     const day = date.getDate()
-//     const hour = date.getHours()
-//     const minutes = date.getMinutes()
-//     let dateTime = `${day}-${month}-${year}, ${hour}:${minutes}`
-// }
+}
 
 
 
