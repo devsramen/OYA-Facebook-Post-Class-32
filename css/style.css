@@ -684,9 +684,10 @@ main{
     background-color: #252526;
 }
 span.asideLeftContactItemName {
-    color: #eeeeee;
-    line-height: 1;
     width: 282px;
+    font-size: 18px;
+    line-height: 1;
+    color: #eeeeee;
 }
 .asideLeftGroupImageWrapper{
     width: 60px;
