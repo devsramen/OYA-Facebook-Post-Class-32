@@ -598,7 +598,7 @@ main{
     -ms-transition: all linear 0.2s;
     -o-transition: all linear 0.2s;
 }
-.asideRightContactItem:hover{    
+.asideRightGroupItem:hover{    
     background-color: #252526;
 }
 .asideRightGroupImageWrapper{

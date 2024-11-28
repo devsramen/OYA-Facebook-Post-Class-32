@@ -57,7 +57,7 @@ const userData = [
                 ]
 const asideLeftItemListData = [
                     {
-                        name: "Ramen",
+                        name: "Khan Jahan Ali",
                         pictureLink: "./images/userPhoto.png"
                     },
                     {
