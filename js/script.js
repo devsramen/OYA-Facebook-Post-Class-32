@@ -9,17 +9,17 @@ let descriptionText = document.querySelector("#descriptionText")
 let inputLikedUserName = document.querySelector("#inputLikedUserName")
 
 const postData = [
-    {
-        userImg: "./images/userPhoto.png",
-        userName: "Jon. Abrahon Linkon",
-        postTime: "16h",
-        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque omnis aliquam voluptas quidem sit, sequi doloremque nulla quisquam, beatae illo cum ullam a modi. Doloribus consequatur, ducimus tempore laboriosam odio fugiat culpa impedit aspernatur earum eveniet obcaecati odit exercitationem facilis saepe magnam iure ut.",
-        postImage: "./images/postImage-1.jpg",
-        likedUserName: "ABM Shawon & Others",
-        reactCount: "15k",
-        commentCount: "1k",
-        shareCount : "1.5k"
-    }
+    // {
+    //     userImg: "./images/userPhoto.png",
+    //     userName: "Jon. Abrahon Linkon",
+    //     postTime: "16h",
+    //     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque omnis aliquam voluptas quidem sit, sequi doloremque nulla quisquam, beatae illo cum ullam a modi. Doloribus consequatur, ducimus tempore laboriosam odio fugiat culpa impedit aspernatur earum eveniet obcaecati odit exercitationem facilis saepe magnam iure ut.",
+    //     postImage: "./images/postImage-1.jpg",
+    //     likedUserName: "ABM Shawon & Others",
+    //     reactCount: "15k",
+    //     commentCount: "1k",
+    //     shareCount : "1.5k"
+    // }
 ]
 
 
@@ -45,6 +45,7 @@ submitPost.addEventListener("click",()=>{
             userName: `${inputUserName.value}`,
             postTime: dateTime,
             description:`${descriptionText.value}`,
+            // postImage: "img",
             postImage: inputPostPhotoLink.value == ""?"https://images.pexels.com/photos/29207330/pexels-photo-29207330/free-photo-of-colorful-victorian-terraced-houses-street-view.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load":inputPostPhotoLink.value,
             reactCount: `${reactCountNumber}k`,
             likedUserName: `${inputLikedUserName.value}`,
@@ -53,19 +54,19 @@ submitPost.addEventListener("click",()=>{
         }
     )
     postList.innerHTML = "";
-    // inputUserPhotoLink.value = "";
-    // inputUserName.value = "";
-    // inputPostPhotoLink.value = "";
-    // descriptionText.value = "";
-    // inputLikedUserName.value = "";
+    inputUserPhotoLink.value = "";
+    inputUserName.value = "";
+    inputPostPhotoLink.value = "";
+    descriptionText.value = "";
+    inputLikedUserName.value = "";
     display();
-    // console.log(postData);
-    deleteItem()
+    console.log(postData);
 })
 
 
 
 const display = ()=>{
+    postList.innerHTML = "";
     postData.map((item,index)=>{
         postList.innerHTML += `
             <li class="post">
@@ -112,6 +113,7 @@ const display = ()=>{
                         </div>
                     </li>
         `
+        deleteItem()
     })
 }
 
@@ -122,13 +124,11 @@ let deleteItem = ()=>{
     deleteBtnArray.map((deleteButton,index)=>{
         deleteButton.addEventListener("click",()=>{
             console.log("delete", index);
-            
             postData.splice(index,1)
-            console.log(postData);            
-            console.log(deleteBtnArray);            
+            display()
+            console.log(postData);
         })
     })
-
 }
 
 
