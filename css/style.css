@@ -55,7 +55,6 @@ aside.right {
 main {
     grid-area: main;
     padding: 1rem;
-    /* border: 1px solid red; */
     margin-top: 98px;
 }
 .asideLeftWrapper{
@@ -64,7 +63,6 @@ main {
     position: fixed;
     top: 98px;
     left: 0;
-    border: 1px solid red;
 }
 .asideRightWrapper {
     width: 25%;
@@ -72,8 +70,14 @@ main {
     position: fixed;
     top: 98px;
     right: 0;
-    border: 1px solid red;
+    /* overflow-y: scroll; */
 }
+/* .asideRightWrapper::-webkit-scrollbar {
+    width: 0;
+}
+.asideRightWrapper:hover ::-webkit-scrollbar {
+    width: 20px;
+} */
 .dFlex{
     display: flex;
 }
@@ -83,6 +87,10 @@ main {
 #nav{
     background-color: #262729;
     padding: 10px 15px;
+}
+.navLogo{
+    width: 45px;
+    height: 45px;
 }
 .dFlex{
     width: 100%;
@@ -440,30 +448,226 @@ main {
     font-weight: 600;
     text-transform: capitalize;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
     padding: 15px 0 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.likeCommentShareIcon #like {
+    width: 33.33%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.likeCommentShareIcon #comments {
+    width: 33.33%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.likeCommentShareIcon #shares {
+    width: 33.33%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.likeCommentShareIcon #like:hover,
+.likeCommentShareIcon #comments:hover,
+.likeCommentShareIcon #shares:hover{
+    cursor: pointer;
+    background-color: #3b3d3e;
+    
+}
+.likeCommentShareIcon i{
+    font-size: 25px;
+    margin-right: 5px;
+}
 
 main{
-    height: 10000px;
+    height: 1000px;
+}
+/* Main Section End */
+
+/* aside Right Section Start */
+.asideRightWrapper{
+    padding: 20px 20px 20px 150px;
+}
+.asideRightContact {
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: #abaeb3;
+    margin-bottom: 13px;
+}
+#asideRightContactItemList{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #abaeb3;
+}
+.asideRightContactItem{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    color: #696b6d;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+.asideRightContactItem:hover{    
+    background-color: #252526;
+}
+.asideRightImageWrapper{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.asideRightImageWrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.asideRightGroupName {
+    color: #abaeb3;
+    margin: 20px 0;
+}
+#asideRightGroupItemList{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.asideRightGroupItem{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    color: #696b6d;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+.asideRightContactItem:hover{    
+    background-color: #252526;
+}
+.asideRightGroupImageWrapper{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.asideRightGroupImageWrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.5;
+}
+/* aside Right Section End */
+
+/* aside Left Section Start */
+.asideLeftWrapper {
+    padding: 0px 150px 20px 10px;
+}
+#asideLeftContactItemList{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #abaeb3;
+}
+.asideLeftContactItem{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    color: #d7dade;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+.asideLeftContactItem:hover{    
+    background-color: #252526;
+}
+.asideLeftImageWrapper{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.asideLeftImageWrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* opacity: 0.5; */
 }
 
 
-/* Main Section End */
 
 
 
@@ -473,14 +677,62 @@ main{
 
 
 
-/* Main Section Start */
-/* Main Section End */
 
 
-
-
-
-.navLogo{
-    width: 45px;
-    height: 45px;
+.asideLeftGroupName {
+    color: #abaeb3;
+    margin: 20px 0;
 }
+#asideLeftGroupItemList{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.asideLeftGroupItem{
+    font-size: 20px;
+    color: #d7dade;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+.asideLeftGroupItem:hover{    
+    background-color: #252526;
+}
+span.asideLeftContactItemName {
+    color: #eeeeee;
+    line-height: 1;
+    width: 282px;
+}
+.asideLeftGroupImageWrapper{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.asideLeftGroupImageWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+/* aside Left Section End */
+
+
+
+
+
