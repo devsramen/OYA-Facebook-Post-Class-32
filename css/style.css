@@ -557,6 +557,7 @@ main{
     opacity: 0.5;
 }
 .asideRightGroupName {
+    font-size: 20px;
     color: #abaeb3;
     margin: 20px 0;
 }
@@ -652,6 +653,7 @@ main{
     /* opacity: 0.5; */
 }
 .asideLeftGroupName {
+    font-size: 20px;
     color: #abaeb3;
     margin: 20px 0;
 }
